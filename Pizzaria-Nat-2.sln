@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pizzaria_Nat.Domain", "Pizzaria_Nat.Domain", "{211C9D3D-342A-4C68-B0A9-02A6C2BD29F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pizzaria_Nat.Infra", "Pizzaria_Nat.Infra", "{0BFB86BB-2FAA-4C60-935D-0849D96D3004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{B9982BDB-0FB0-49F5-B678-8A18792F96E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pizzaria_Nat_API", "Pizzaria_Nat_API", "{16FFC18B-B07A-4EE0-AC8C-9A7CDA667DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{8BB802AF-3213-48D3-B485-FFF573FA11CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253} = {211C9D3D-342A-4C68-B0A9-02A6C2BD29F3}
+		{B9982BDB-0FB0-49F5-B678-8A18792F96E2} = {0BFB86BB-2FAA-4C60-935D-0849D96D3004}
+		{8BB802AF-3213-48D3-B485-FFF573FA11CB} = {16FFC18B-B07A-4EE0-AC8C-9A7CDA667DE0}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86EA12E2-5ABD-4C0C-81BE-70C8DD7E1253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9982BDB-0FB0-49F5-B678-8A18792F96E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9982BDB-0FB0-49F5-B678-8A18792F96E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9982BDB-0FB0-49F5-B678-8A18792F96E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9982BDB-0FB0-49F5-B678-8A18792F96E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB802AF-3213-48D3-B485-FFF573FA11CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB802AF-3213-48D3-B485-FFF573FA11CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB802AF-3213-48D3-B485-FFF573FA11CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB802AF-3213-48D3-B485-FFF573FA11CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
