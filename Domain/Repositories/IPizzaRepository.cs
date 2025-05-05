@@ -1,5 +1,5 @@
 
-using Pizzaria_Nat_2.Models;
+using Pizzaria_Nat_2.Domain.Models;
 
 namespace Pizzaria_Nat_2.Repositories;
 

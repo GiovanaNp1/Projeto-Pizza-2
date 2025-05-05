@@ -1,4 +1,4 @@
-using Pizzaria_Nat_2.Models;
+using Pizzaria_Nat_2.Domain.Models;
 using Pizzaria_Nat_2.Repositories;
 
 namespace Pizzaria_Nat_2.Infra.Repositories;

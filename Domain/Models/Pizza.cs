@@ -1,4 +1,4 @@
-namespace Pizzaria_Nat_2.Models;
+namespace Pizzaria_Nat_2.Domain.Models;
 
 public class Pizza
 {
