@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Pizzaria_Nat_2.Infra.Repositories;
 using Pizzaria_Nat_2.Repositories;
 using Pizzaria_Nat_2.Services;
@@ -11,8 +12,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IPizzaRepository, PizzaRepository>();
+// builder.Services.AddSingleton<IPizzaRepository, PizzaRepository>();
+
+builder.Services.AddDbContext<PizzariaDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    ));
+
 builder.Services.AddScoped<PizzaService>();
+
+builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
 
 var app = builder.Build();
 

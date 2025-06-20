@@ -37,7 +37,7 @@ public class PizzaController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public IActionResult Update(Guid id, Pizza pizza)
+    public IActionResult Update(Guid id, [FromBody]Pizza pizza)
     {
         if (id != pizza.Id)
             return BadRequest();
