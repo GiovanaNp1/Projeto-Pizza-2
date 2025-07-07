@@ -20,6 +20,12 @@ builder.Services.AddDbContext<PizzariaDbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
     ));
 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379"; // ou a URL do Redis remoto
+    options.InstanceName = "Pedidos:";
+});
+
 builder.Services.AddScoped<PizzaService>();
 
 builder.Services.AddScoped<IPizzaRepository, PizzaRepository>();
