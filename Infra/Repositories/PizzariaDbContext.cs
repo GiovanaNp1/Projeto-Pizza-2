@@ -1,22 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Pizzaria_Nat_2.Domain.Models;
 
-namespace Pizzaria_Nat_2.Infra.Repositories;
-
-public class PizzariaDbContext: DbContext
+namespace Pizzaria_Nat_2.Infra.Repositories
 {
-    public PizzariaDbContext(DbContextOptions<PizzariaDbContext> options) : base(options) { }
-    
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public class PizzariaDbContext: DbContext
     {
-        modelBuilder.Entity<Pizza>()
-            .HasMany(p => p.Ingredients)
-            .WithMany()
-            .UsingEntity<Dictionary<string, object>>(
-                "Pizza_Ingredient",
-                j => j.HasOne<Ingredient>().WithMany().HasForeignKey("IngredientId"),
-                j => j.HasOne<Pizza>().WithMany().HasForeignKey("PizzaId")
-                );
+        public PizzariaDbContext(DbContextOptions<PizzariaDbContext> options) : base(options) { }
+    
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Pizza>()
+                .HasMany(p => p.Ingredients)
+                .WithMany(i => i.Pizzas);
+        }
+        public DbSet<Pizza> Pizzas => Set<Pizza>();
     }
-    public DbSet<Pizza> Pizzas => Set<Pizza>();
 }
